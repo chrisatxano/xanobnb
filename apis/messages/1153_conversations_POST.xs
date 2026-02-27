@@ -78,7 +78,7 @@ query conversations verb=POST {
     db.patch conversation {
       field_name = "id"
       field_value = $conversation.id
-      data = {last_message_at: now}
+      data = `{last_message_at: now}`
     }
   }
 

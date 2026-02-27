@@ -71,7 +71,12 @@ query "bookings/{booking_id}/status" verb=PATCH {
     }
   
     var $data {
-      value = {status: $input.status, updated_at: now}
+      value = ```
+        {
+          status: $input.status,
+          updated_at: now
+        }
+        ```
     }
   
     conditional {

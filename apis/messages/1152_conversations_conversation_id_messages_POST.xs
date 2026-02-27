@@ -54,7 +54,7 @@ query "conversations/{conversation_id}/messages" verb=POST {
     db.patch conversation {
       field_name = "id"
       field_value = $input.conversation_id
-      data = {last_message_at: now}
+      data = `{last_message_at: now}`
     }
   }
 
