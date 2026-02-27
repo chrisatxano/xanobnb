@@ -7,7 +7,9 @@ query listings verb=GET {
 
   stack {
     db.query listing {
+      where = $db.listing.is_active == true
       return = {type: "list"}
+      output = ["title", "description", "property_type", "price_per_night"]
     } as $model
   }
 
